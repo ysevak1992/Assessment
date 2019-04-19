@@ -1,3 +1,4 @@
+<<<<<<< HEAD
             *********Problem Statement*********
 	Build a RESTful service that generates the round robin schedule for the PRO-Kabaddi event that conforms to the following constraints
 	Accept N number of teams
@@ -5,6 +6,15 @@
 	Maximum 2 matches per day are allowed
 	No team should play on consecutive days
              **********Solution***********
+=======
+Problem Statement
+	Build a RESTful service that generates the round robin schedule for the PRO-Kabaddi event that conforms to the following constraints
+	Accept N number of teams
+	Each team must play against every other team once home and away
+	Maximum 2 matches per day are allowed
+	No team should play on consecutive days
+Solution:
+>>>>>>> branch 'master' of https://github.com/ysevak1992/Pro-Kabaddi.git
 	Step1
 	Clone GIT Repository in local using URL : https://github.com/ysevak1992/Pro-Kabaddi.git
 	Step2:
