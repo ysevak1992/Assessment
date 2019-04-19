@@ -4,7 +4,7 @@
 	Each team must play against every other team once home and away
 	Maximum 2 matches per day are allowed
 	No team should play on consecutive days
-             **********Solution***********:
+             **********Solution***********
 	Step1
 	Clone GIT Repository in local using URL : https://github.com/ysevak1992/Pro-Kabaddi.git
 	Step2:
