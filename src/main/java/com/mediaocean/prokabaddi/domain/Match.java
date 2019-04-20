@@ -1,8 +1,6 @@
-package com.mediaocean.prokabaddi.vo;
+package com.mediaocean.prokabaddi.domain;
 
 import java.util.Date;
-
-import com.mediaocean.prokabaddi.domain.Team;
 
 public class Match {
 

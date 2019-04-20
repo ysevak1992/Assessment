@@ -11,4 +11,4 @@
 	Start application over embedded tomcat server for spring boot
 	Step3: Generate match schedule
 	Open browser or postman and try below url
-	curl -H "Content-Type: application/json" -X GET http://localhost:8080/prokabaddi/contoller/matchscheduler?ids=1,2&date=20190419
+	curl -H "Content-Type: application/json" -X GET http://localhost:8080/prokabaddi/contoller/matchscheduler?ids=1,2,3,4&date=20190419

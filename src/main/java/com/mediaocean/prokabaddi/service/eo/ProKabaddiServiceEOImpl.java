@@ -1,20 +1,20 @@
 package com.mediaocean.prokabaddi.service.eo;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
+import com.mediaocean.prokabaddi.domain.Match;
 import com.mediaocean.prokabaddi.domain.Team;
-import com.mediaocean.prokabaddi.vo.Match;
+import com.mediaocean.prokabaddi.utils.ProKabaddiUtils;
 
 @Service
 public class ProKabaddiServiceEOImpl  implements ProKabaddiServiceEO{
@@ -100,19 +100,12 @@ private static final Logger LOGGER = LoggerFactory.getLogger(ProKabaddiServiceEO
 	}
 	
 	public void printMatches(List<Match> matches) {
-		LOGGER.debug( formatString("TEAM-A"), formatString("TEAM-B"), formatString("Location"), formatString("Date"));
-		System.out.println( formatString("TEAM-A")+""+ formatString("TEAM-B")+""+formatString("Location")+""+ formatString("Date"));
+		LOGGER.debug( ProKabaddiUtils.formatString("TEAM-A"), ProKabaddiUtils.formatString("TEAM-B"), ProKabaddiUtils.formatString("Location"), ProKabaddiUtils.formatString("Date"));
+		System.out.println( ProKabaddiUtils.formatString("TEAM-A")+""+ ProKabaddiUtils.formatString("TEAM-B")+""+ProKabaddiUtils.formatString("Location")+""+ ProKabaddiUtils.formatString("Date"));
 		LOGGER.debug(" --------------------------------------------------------------------------------------------------------------------------------------------");
 		for (Match match : matches) {
-			System.out.println(""+ formatString(match.getTeamA().getName())+""+ formatString(match.getTeamB().getName())+""+ formatString(match.getLocation())+""+ formatString(formatDate(match.getDate())));
-			LOGGER.debug( formatString(match.getTeamA().getName()), formatString(match.getTeamB().getName()), formatString(match.getLocation()), formatString(formatDate(match.getDate())));
+			System.out.println(""+ ProKabaddiUtils.formatString(match.getTeamA().getName())+""+ ProKabaddiUtils.formatString(match.getTeamB().getName())+""+ ProKabaddiUtils.formatString(match.getLocation())+""+ ProKabaddiUtils.formatString(ProKabaddiUtils.formatDate(match.getDate())));
+			LOGGER.debug( ProKabaddiUtils.formatString(match.getTeamA().getName()), ProKabaddiUtils.formatString(match.getTeamB().getName()), ProKabaddiUtils.formatString(match.getLocation()), ProKabaddiUtils.formatString(ProKabaddiUtils.formatDate(match.getDate())));
 		}
-	}
-	private static String formatDate(Date actualDate) {
-		return new SimpleDateFormat("dd-MM-yyyy").format(actualDate);
-	}
-	
-	private static String formatString(String actualString) {
-		return StringUtils.rightPad(actualString, 20, "");
-	}
+	  }
 }

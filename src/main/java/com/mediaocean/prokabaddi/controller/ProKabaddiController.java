@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.mediaocean.prokabaddi.service.bo.ProKabaddiServiceBO;
-import com.mediaocean.prokabaddi.vo.Match;
 import com.mediaocean.prokabaddi.vo.ProKabaddiInputVO;
+import com.mediaocean.prokabaddi.vo.ProKabaddiOutputVO;
 
 
 /**
@@ -34,8 +34,8 @@ public class ProKabaddiController {
 	 */
 	
 	@GetMapping(value ="/matchscheduler")	
-	 public ResponseEntity<List<Match>> matchScheduler(@Valid ProKabaddiInputVO  kabaddiInputVO ) {
-	   List<Match> matches =proKabaddiServiceBO.matchScheduler(kabaddiInputVO.getIds(), kabaddiInputVO.getDate());
-		return new ResponseEntity<List<Match>>(matches, HttpStatus.OK);
+	 public ResponseEntity<List<ProKabaddiOutputVO>> matchScheduler(@Valid ProKabaddiInputVO  kabaddiInputVO ) {
+		List<ProKabaddiOutputVO> matches =proKabaddiServiceBO.matchScheduler(kabaddiInputVO.getIds(), kabaddiInputVO.getDate());
+		return new ResponseEntity<List<ProKabaddiOutputVO>>(matches, HttpStatus.OK);
  }
 }

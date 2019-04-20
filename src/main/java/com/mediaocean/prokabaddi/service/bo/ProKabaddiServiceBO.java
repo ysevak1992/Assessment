@@ -3,10 +3,10 @@ package com.mediaocean.prokabaddi.service.bo;
 import java.util.List;
 
 
-import com.mediaocean.prokabaddi.vo.Match;
+import com.mediaocean.prokabaddi.vo.ProKabaddiOutputVO;
 
 public interface ProKabaddiServiceBO {
 	
-	public List<Match> matchScheduler(String ids ,String date);
+	public List<ProKabaddiOutputVO> matchScheduler(String ids ,String date);
 
 }
